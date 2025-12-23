@@ -25,6 +25,11 @@ Ini membuat kode jauh lebih bersih (*Clean Code*) dan mudah untuk dikembangkan.
 ### 4. Validasi Input yang Kuat
 Program kini lebih tahan terhadap *human error*. Menggunakan perulangan (**Nested Loop**), program akan terus meminta input sampai user memasukkan data yang valid, terutama saat pemilihan barang dan konfirmasi "Tambah lagi (y/n)".
 
+### 5. Penerapan Nama Berawalan Huruf Kapital (Exported Identifiers)
+Mungkin muncul pertanyaan: *Kenapa menggunakan `Menu` (huruf kapital) padahal hanya satu file?*
+* **Standar Profesional (Best Practice)**: Di bahasa Go, huruf kapital berarti data tersebut bersifat **Public (Exported)**. Saya membiasakan ini agar jika project berkembang dan dibagi ke banyak folder (package), data ini sudah siap diakses tanpa perlu mengubah kodingan lagi.
+* **Persiapan Skalabilitas**: Ini adalah langkah antisipasi agar data Struct saya siap digunakan oleh library lain di masa depan, misalnya saat ingin mengubah data belanjaan menjadi format JSON atau menyimpannya ke Database.
+
 ---
 
 ## 🚀 Cara Menjalankan
